@@ -1,4 +1,42 @@
+import pandas as pd
+import re
 
+data_path = 'data'
+fields_path = 'fields'
+
+# Read and parse a file containing column names for a dataset.
+# Returns a list of strings (the column names).
+def load_column_names(columns_file_name):
+    file = open(columns_file_name)
+    column_names = []
+    readingFields = False
+    for line in file:
+        if readingFields:
+            if re.match('^[0-9]', line):
+                split_line = line.split()
+                column_names.append(split_line[1])
+        elif line.startswith('Field#'):
+            readingFields = True
+    file.close()
+    return column_names
+#}
+
+# Load a dataest by its abbreviated names (ex: RCL).
+def load_data_file(name, encoding):
+    
+    # Read the column names from a separate file.
+    fields_file_name = fields_path + '/' + name + '.txt';
+    names = load_column_names(fields_file_name)
+    
+    # Read the data from a CSV file.
+    data_file_name = 'FLAT_' + name + '.txt';
+    df = pd.read_csv(data_path + '/' + data_file_name,
+                     delimiter='\t', header=None, encoding=encoding, names=names)
+    
+    return df
+#}
+
+cpml_df = load_data_file('cmpl', 'latin1');
 
 #===============================================
 
