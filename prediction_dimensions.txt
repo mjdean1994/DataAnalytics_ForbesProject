@@ -1,0 +1,37 @@
+
+
+
+Target column - Recalled Yes/No
+
+only predict for vehicles (PROD_TYPE = V)
+
+
+accident statistics:
+
+ * CRASH              - was there a crash?
+ * FIRE               - was there a fire?
+ * INJURED            - number of injuires
+ * DEATHS             - number of deaths
+ * VEHICLES_TOWED_YN  - was the vehicle towed?
+ * MEDICAL_ATTN       - was medical attention required?
+ * MILES              - mileage at failure
+
+vehicle/equipment information:
+
+ * MAKETXT            - vehicle make
+ * ORIG_OWNER_YN      - original owner ?
+ * ANTI_BRAKES_YN     - antilock breaks
+ * CRUISE_CONT_YN     - cruise control
+ * NUM_CYLS           - number of cylinders
+ * DRIVE_TRAIN        - drive train type
+ * FUEL_SYS           - fuel system code
+ * DRIVE_TRAIN        - fuel type
+ * TRANS_TYPE         - transmission type
+ * VEH_SPEED          - vehicle speed
+
+reporting information:
+
+ * total number of complaints
+ * FAILDATE           - date of incident
+ * POLICE_RPT_YN      - reported to police ?
+ * CMPL_TYPE          - source of complaint
