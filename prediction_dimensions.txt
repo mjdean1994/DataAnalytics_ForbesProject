@@ -1,9 +1,16 @@
 
-
+===============================================================================
+VEHICLE RECALL PREDICTION INFORMATION
+===============================================================================
 
 Target column - Recalled Yes/No
 
 only predict for vehicles (PROD_TYPE = V)
+
+all features come from complaints dataset
+
+
+
 
 
 accident statistics:
@@ -35,3 +42,5 @@ reporting information:
  * FAILDATE           - date of incident
  * POLICE_RPT_YN      - reported to police ?
  * CMPL_TYPE          - source of complaint
+ 
+ 
