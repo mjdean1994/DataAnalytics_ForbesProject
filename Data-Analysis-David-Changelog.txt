@@ -1,0 +1,6 @@
+Added the ability to get a subset of the dataset for testing.
+	Renamed a few variables because of this.
+Added component descriptions as a key for the complaints dataset.
+Did some cleaning on memory.
+Modified some sections of the prediction analysis.
+Went from .66 roc to .67 yay?
